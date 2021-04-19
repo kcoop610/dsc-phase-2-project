@@ -1,4 +1,7 @@
+<link href="custom.css" rel="styles"></link>
+
 # King County Housing Market
+
 ## Maximizing return on house renovation investment
 
 Kristin Cooper | DTSC-FT-022221 | Instructor: James Irving
@@ -7,7 +10,7 @@ Kristin Cooper | DTSC-FT-022221 | Instructor: James Irving
 <img src='https://static.seattletimes.com/wp-content/uploads/2020/06/06052020_homesales_104503-1024x656.jpg' width=90%>
 
 
-[Image Source](https://www.seattletimes.com/business/real-estate/king-county-home-prices-dropped-as-coronavirus-squelched-activity-but-now-the-market-may-be-picking-up/)## Subtitle describing the analysis 
+[Image Source](https://www.seattletimes.com/business/real-estate/king-county-home-prices-dropped-as-coronavirus-squelched-activity-but-now-the-market-may-be-picking-up/)
 
 
 ### Business problem:
@@ -25,7 +28,7 @@ Data was preprocessed to address some missing data, remove outliers from the mod
 
 Some descriptive analysis confirmed that houses that were renovated do indeed tend to sell for more. Positive relationships were observed between price and the number of bedrooms, number of bathrooms, and square footage, and a negative relationship was observed between price and the years elapsed since renovation.
 
-<img src='./images/boxplot_renovated?_without_outliers.png'>
+<img src='./images/boxplot_renovated%3F_without_outliers.png'>
 
 
 ## Results & Recommendations
@@ -44,14 +47,14 @@ Some descriptive analysis confirmed that houses that were renovated do indeed te
 > The linear relationship between number of rooms and price is stronger for bathrooms than bedrooms.
 
 #### Both Your House Size And That Of Your Neighbors Yields Higher Sale Price
-<img src='./images/lmplot_neighboring_sqft_living.png', width=90%>
+<img src='./images/lmplot_neighboring_sqft_living.png' width=90%>
 
-<img src='./images/lmplot_sqft_living.png', width=90%>
+<img src='./images/lmplot_sqft_living.png' width=90%>
 
 > There is a strong relationship between size of living space and price - and the neighborhood house size matters too.
 
 #### Custom Finishes, Design, & Quality Building Materials Are Worth The Investment
-<img src='./images/lmplot_grade.png', width=90%>
+<img src='./images/lmplot_grade.png' width=90%>
 
 > Increasing your house's score on the 13-point grading system has a strong correlation with price.
 
@@ -92,6 +95,8 @@ For any additional questions, please contact kcoop610@gmail.com.
     ├── column_names.md
     ├── kc_zipcode_map.geojson 
     └── updated_kc_zipcode_map.json
+└── styles
+    └── custom.css 
  
 
 ```
