@@ -13,11 +13,12 @@ Kristin Cooper | DTSC-FT-022221 | Instructor: James Irving
 [Image Source](https://www.seattletimes.com/business/real-estate/king-county-home-prices-dropped-as-coronavirus-squelched-activity-but-now-the-market-may-be-picking-up/)
 
 
-### Business problem:
+## Business problem:
 
 King County, Washington, which includes the Seattle metro area, is a prime location for residential real estate investment. Homeowners and house flippers should leverage this report to understand how they can improve the resale value of their property.
 
 ## Data
+
 ### Source
 
 Source data includes 21,597 residential houses publicly sold between May 2014 and May 2015.
@@ -31,35 +32,35 @@ Some descriptive analysis confirmed that houses that were renovated do indeed te
 <img src='./images/boxplot_renovated%3F_without_outliers.png'>
 
 
-## Results & Recommendations
+## Results
 
-#### Zipcode Matters
+### Zipcode Matters
 <img src="./images/zipmap_price.png" width=90%>
 
 > Though not in the homeowner's control, zipcode does heavily influence the median and mean house price in King County. Zipcodes near the Seattle city center and Bellevue area tend to have higher-priced homes.
 
 
-#### Bathroom Count Matters More Than Bedroom Count
+### Bathroom Count Matters More Than Bedroom Count
 <img src="./images/lmplot_bathrooms.png" width=90%>
 
 <img src="./images/lmplot_bedrooms.png" width=90%>
 
 > The linear relationship between number of rooms and price is stronger for bathrooms than bedrooms.
 
-#### Both Your House Size And That Of Your Neighbors Yields Higher Sale Price
+### Both Your House Size And That Of Your Neighbors Yields Higher Sale Price
 <img src='./images/lmplot_neighboring_sqft_living.png' width=90%>
 
 <img src='./images/lmplot_sqft_living.png' width=90%>
 
 > There is a strong relationship between size of living space and price - and the neighborhood house size matters too.
 
-#### Custom Finishes, Design, & Quality Building Materials Are Worth The Investment
+### Custom Finishes, Design, & Quality Building Materials Are Worth The Investment
 <img src='./images/lmplot_grade.png' width=90%>
 
 > Increasing your house's score on the 13-point grading system has a strong correlation with price.
 
 
-### Recommendations:
+## Recommendations:
 
 Several factors were found to influence house price, some of which are probably not in the homeowner's control. Based on the model, five key recommendations for King County homeowners to consider when renovating their house are:
 
@@ -70,7 +71,7 @@ Several factors were found to influence house price, some of which are probably 
 * **Sell quickly after renovating** - newly renovated houses can sometimes feel like new. Sale price tends to be relatively higher for houses that have been renovated more recently.
 
 
-### Limitations & Next Steps
+## Limitations & Next Steps
 
 Many, if not all of the features found to influence sale price have a point of diminishing returns that should be investigated further. 
 
@@ -81,7 +82,7 @@ Please review the full report in [this jupyter notebook](./king_county_house_ren
 For any additional questions, please contact kcoop610@gmail.com.
 
 
-##### Repository Structure:
+#### Repository Structure:
 
 ```
 
