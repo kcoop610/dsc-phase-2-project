@@ -1,5 +1,3 @@
-<link href="custom.css" rel="styles"></link>
-
 # King County Housing Market
 
 ## Maximizing return on house renovation investment
@@ -17,7 +15,7 @@ Kristin Cooper | DTSC-FT-022221 | Instructor: James Irving
 
 King County, Washington, which includes the Seattle metro area, is a prime location for residential real estate investment. Homeowners and house flippers should leverage this report to understand how they can improve the resale value of their property.
 
-## Data
+## Data:
 
 ### Source
 
@@ -32,29 +30,29 @@ Some descriptive analysis confirmed that houses that were renovated do indeed te
 <img src='./images/boxplot_renovated_without_outliers.png'>
 
 
-## Results
+## Results:
 
-### Zipcode Matters
+#### Zipcode Matters
 <img src="./images/zipmap_price.png" width=90%>
 
 > Though not in the homeowner's control, zipcode does heavily influence the median and mean house price in King County. Zipcodes near the Seattle city center and Bellevue area tend to have higher-priced homes.
 
 
-### Bathroom Count Matters More Than Bedroom Count
+#### Bathroom Count Matters More Than Bedroom Count
 <img src="./images/lmplot_bathrooms.png" width=90%>
 
 <img src="./images/lmplot_bedrooms.png" width=90%>
 
 > The linear relationship between number of rooms and price is stronger for bathrooms than bedrooms.
 
-### Both Your House Size And That Of Your Neighbors Yields Higher Sale Price
-<img src='./images/lmplot_neighboring_sqft_living.png' width=90%>
-
+#### Both Your House Size And That Of Your Neighbors Yields Higher Sale Price
 <img src='./images/lmplot_sqft_living.png' width=90%>
+
+<img src='./images/lmplot_neighboring_sqft_living.png' width=90%>
 
 > There is a strong relationship between size of living space and price - and the neighborhood house size matters too.
 
-### Custom Finishes, Design, & Quality Building Materials Are Worth The Investment
+#### Custom Finishes, Design, & Quality Building Materials Are Worth The Investment
 <img src='./images/lmplot_grade.png' width=90%>
 
 > Increasing your house's score on the 13-point grading system has a strong correlation with price.
@@ -62,22 +60,20 @@ Some descriptive analysis confirmed that houses that were renovated do indeed te
 
 ## Recommendations:
 
-Several factors were found to influence house price, some of which are probably not in the homeowner's control. Based on the model, five key recommendations for King County homeowners to consider when renovating their house are:
+Several factors were found to influence house price, some of which are probably not in the homeowner's control. Based on the model, three key recommendations for King County homeowners to consider when renovating their house are:
 
-* **Add living space** - consider finishing an unfinished basement if you have one, or adding on to your house.
+* **Expand living space** - consider finishing an unfinished basement if you have one, or adding on to your house.
 * **Add a full or half bath** - bring up your bathroom-to-bedroom ratio
-* **Improve overall condition** - consider typical home maintenance projects that will improve condition rating of the house, such as repainting, updating flooring, replacing older appliances, etc.
-* **Use high-quality materials** - raise your home's grade rating by bringing in marble or quartz countertops, new cabinets, crown molding, wood flooring, luxury finishes, etc.
-* **Sell quickly after renovating** - newly renovated houses can sometimes feel like new. Sale price tends to be relatively higher for houses that have been renovated more recently.
+* **Invest in high-quality materials** - raise your home's grade rating by bringing in marble or quartz countertops, new cabinets, crown molding, wood flooring, luxury finishes, etc.
 
 
-## Limitations & Next Steps
+## Limitations & Next Steps:
 
 Many, if not all of the features found to influence sale price have a point of diminishing returns that should be investigated further. 
 
 
-## For further information
-Please review the full report in [this jupyter notebook](./king_county_house_renovation_model.ipynb) or review our [presentation](./SampleProjectSlides.pdf)
+## For further information:
+Please review the full report in [this jupyter notebook](./king_county_house_renovation_model.ipynb) or review our [presentation](./presentation.pdf)
 
 For any additional questions, please contact kcoop610@gmail.com.
 
