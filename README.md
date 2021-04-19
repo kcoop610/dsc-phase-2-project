@@ -29,7 +29,7 @@ Data was preprocessed to address some missing data, remove outliers from the mod
 
 Some descriptive analysis confirmed that houses that were renovated do indeed tend to sell for more. Positive relationships were observed between price and the number of bedrooms, number of bathrooms, and square footage, and a negative relationship was observed between price and the years elapsed since renovation.
 
-<img src='./images/boxplot_renovated%3F_without_outliers.png'>
+<img src='./images/boxplot_renovated_without_outliers.png'>
 
 
 ## Results
