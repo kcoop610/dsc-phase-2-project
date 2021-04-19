@@ -1,66 +1,97 @@
-# Phase 2 Project
+# King County Housing Market
+## Maximizing return on house renovation investment
 
-Another module down--you're almost half way there!
+Kristin Cooper | DTSC-FT-022221 | Instructor: James Irving
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
+<img src='https://static.seattletimes.com/wp-content/uploads/2020/06/06052020_homesales_104503-1024x656.jpg' width=90%>
 
-## Project Overview
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+[Image Source](https://www.seattletimes.com/business/real-estate/king-county-home-prices-dropped-as-coronavirus-squelched-activity-but-now-the-market-may-be-picking-up/)## Subtitle describing the analysis 
 
-### The Data
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+### Business problem:
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
+King County, Washington, which includes the Seattle metro area, is a prime location for residential real estate investment. Homeowners and house flippers should leverage this report to understand how they can improve the resale value of their property.
 
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+## Data
+### Source
 
-### Business Problem
+Source data includes 21,597 residential houses publicly sold between May 2014 and May 2015.
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
+### Methods
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+Data was preprocessed to address some missing data, remove outliers from the model training dataset, and explore the meaning and distribution of each feature. 
 
-## Deliverables
+Some descriptive analysis confirmed that houses that were renovated do indeed tend to sell for more. Positive relationships were observed between price and the number of bedrooms, number of bathrooms, and square footage, and a negative relationship was observed between price and the years elapsed since renovation.
 
-There are three deliverables for this project:
+<img src='./images/boxplot_renovated?_without_outliers.png'>
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+## Results & Recommendations
 
-### Key Points
+#### Zipcode Matters
+<img src="./images/zipmap_price.png" width=90%>
 
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
+> Though not in the homeowner's control, zipcode does heavily influence the median and mean house price in King County. Zipcodes near the Seattle city center and Bellevue area tend to have higher-priced homes.
 
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
 
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
+#### Bathroom Count Matters More Than Bedroom Count
+<img src="./images/lmplot_bathrooms.png" width=90%>
 
-## Getting Started
+<img src="./images/lmplot_bedrooms.png" width=90%>
 
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
+> The linear relationship between number of rooms and price is stronger for bathrooms than bedrooms.
 
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
+#### Both Your House Size And That Of Your Neighbors Yields Higher Sale Price
+<img src='./images/lmplot_neighboring_sqft_living.png', width=90%>
 
-## Project Submission and Review
+<img src='./images/lmplot_sqft_living.png', width=90%>
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
+> There is a strong relationship between size of living space and price - and the neighborhood house size matters too.
 
-## Summary
+#### Custom Finishes, Design, & Quality Building Materials Are Worth The Investment
+<img src='./images/lmplot_grade.png', width=90%>
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+> Increasing your house's score on the 13-point grading system has a strong correlation with price.
+
+
+### Recommendations:
+
+Several factors were found to influence house price, some of which are probably not in the homeowner's control. Based on the model, five key recommendations for King County homeowners to consider when renovating their house are:
+
+* **Add living space** - consider finishing an unfinished basement if you have one, or adding on to your house.
+* **Add a full or half bath** - bring up your bathroom-to-bedroom ratio
+* **Improve overall condition** - consider typical home maintenance projects that will improve condition rating of the house, such as repainting, updating flooring, replacing older appliances, etc.
+* **Use high-quality materials** - raise your home's grade rating by bringing in marble or quartz countertops, new cabinets, crown molding, wood flooring, luxury finishes, etc.
+* **Sell quickly after renovating** - newly renovated houses can sometimes feel like new. Sale price tends to be relatively higher for houses that have been renovated more recently.
+
+
+### Limitations & Next Steps
+
+Many, if not all of the features found to influence sale price have a point of diminishing returns that should be investigated further. 
+
+
+## For further information
+Please review the full report in [this jupyter notebook](./king_county_house_renovation_model.ipynb) or review our [presentation](./SampleProjectSlides.pdf)
+
+For any additional questions, please contact kcoop610@gmail.com.
+
+
+##### Repository Structure:
+
+```
+
+├── README.md            
+├── report.ipynb           
+├── presentation.pdf    
+└── images
+    └── images              
+└── data
+    ├── kc_house_data.csv
+    ├── column_names.md
+    ├── kc_zipcode_map.geojson 
+    └── updated_kc_zipcode_map.json
+ 
+
+```
